@@ -2288,3 +2288,155 @@ footer p:first-child {
     }
 
 }
+/* ============================================================
+   THE STORY YOU HAVE TO SOLVE
+   ============================================================ */
+
+.secret-story {
+    width: 100%;
+    max-width: 850px;
+    margin: 80px auto;
+    padding: 60px 45px;
+
+    text-align: center;
+
+    background: #080808;
+
+    border: 1px solid rgba(212, 175, 55, 0.35);
+
+    box-shadow:
+        0 0 40px rgba(212, 175, 55, 0.08);
+
+    box-sizing: border-box;
+}
+
+
+/* LOCK */
+
+.story-lock {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+
+/* TITLE */
+
+.secret-story h2 {
+    margin: 0 0 45px;
+
+    color: #d4af37;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 32px;
+    font-weight: normal;
+}
+
+
+/* STORY */
+
+.story-text {
+    max-width: 700px;
+    margin: 0 auto;
+
+    text-align: left;
+}
+
+.story-text p {
+    margin: 0 0 22px;
+
+    padding-left: 20px;
+
+    color: #eeeeee;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+    line-height: 1.9;
+
+    border-left: 1px solid rgba(212, 175, 55, 0.2);
+
+    transition: 0.3s ease;
+}
+
+.story-text p:hover {
+    padding-left: 27px;
+
+    border-left-color: #d4af37;
+}
+
+
+/* DIVIDER */
+
+.story-divider {
+    width: 80px;
+    height: 1px;
+
+    margin: 45px auto 30px;
+
+    background: #d4af37;
+
+    opacity: 0.5;
+}
+
+
+/* HINT */
+
+.story-hint {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    padding: 22px 25px;
+
+    color: #bdbdbd;
+
+    background: rgba(212, 175, 55, 0.04);
+
+    border: 1px dashed rgba(212, 175, 55, 0.3);
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+.story-hint strong {
+    color: #d4af37;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .secret-story {
+        width: calc(100% - 30px);
+
+        margin: 55px auto;
+
+        padding: 45px 20px;
+    }
+
+    .story-lock {
+        font-size: 38px;
+    }
+
+    .secret-story h2 {
+        font-size: 25px;
+        line-height: 1.4;
+        margin-bottom: 32px;
+    }
+
+    .story-text p {
+        font-size: 15px;
+        line-height: 1.85;
+
+        padding-left: 14px;
+    }
+
+    .story-hint {
+        padding: 18px 15px;
+        font-size: 13px;
+    }
+}
