@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ola-jose-bd.onrender.com/sitemap.xml

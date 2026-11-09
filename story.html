@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Our Story - Joseph Olamide</title>
+    <meta name="description" content="A personal story about friendship, gratitude and the people who make life's memories meaningful.">
+    <link rel="canonical" href="https://ola-jose-bd.onrender.com/story.html">
+    <meta name="theme-color" content="#050505">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,6 +25,7 @@
             class="menu-toggle"
             id="menuToggle"
             aria-label="Open navigation menu"
+            aria-controls="navLinks"
             aria-expanded="false"
         >
             <span></span>
@@ -35,7 +39,7 @@
 
             <a href="journey.html">Journey</a>
 
-            <a href="story.html">Our Story</a>
+            <a href="story.html" aria-current="page">Our Story</a>
 
             <a href="memories.html">Memories</a>
 
@@ -368,7 +372,7 @@
      MUSIC
      ============================================================ -->
 
-<audio autoplay id="birthdayMusic" loop>
+<audio id="birthdayMusic" loop preload="none">
     <source src="music/birthday.mp3" type="audio/mpeg">
 </audio>
 

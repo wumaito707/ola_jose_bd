@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Memories - Joseph Olamide</title>
+    <meta name="description" content="A gallery of moments and memories celebrating Joseph Olamide's birthday and friendships.">
+    <link rel="canonical" href="https://ola-jose-bd.onrender.com/memories.html">
+    <meta name="theme-color" content="#050505">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,6 +26,7 @@
             class="menu-toggle"
             id="menuToggle"
             aria-label="Open navigation menu"
+            aria-controls="navLinks"
             aria-expanded="false"
         >
             <span></span>
@@ -38,7 +42,7 @@
 
             <a href="story.html">Our Story</a>
 
-            <a href="memories.html">Memories</a>
+            <a href="memories.html" aria-current="page">Memories</a>
 
             <a href="final.html">Final</a>
 
@@ -129,7 +133,7 @@
 
             <img
                 src="images/memory1.jpg"
-                alt="Joseph and Adewole memory"
+                alt="Joseph and Adewole memory" loading="lazy" decoding="async"
             >
 
             <div class="photo-caption">
@@ -158,7 +162,7 @@
 
             <img
                 src="memory2.jpg"
-                alt="Joseph memory"
+                alt="Joseph memory" loading="lazy" decoding="async"
             >
 
             <div class="photo-caption">
@@ -187,7 +191,7 @@
 
             <img
                 src="images/memory3.jpg"
-                alt="Joseph and friends"
+                alt="Joseph and friends" loading="lazy" decoding="async"
             >
 
             <div class="photo-caption">
@@ -470,7 +474,7 @@
 
 <!-- MUSIC -->
 
-<audio autoplay id="birthdayMusic" loop>
+<audio id="birthdayMusic" loop preload="none">
     <source src="music/birthday.mp3" type="audio/mpeg">
 </audio>
 

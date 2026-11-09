@@ -8,6 +8,9 @@
         content="width=device-width, initial-scale=1.0">
 
     <title>Joseph Olamide | A Story Worth Remembering</title>
+    <meta name="description" content="A birthday tribute to Joseph Olamide, celebrating friendship, shared memories and a story worth remembering.">
+    <link rel="canonical" href="https://ola-jose-bd.onrender.com/">
+    <meta name="theme-color" content="#050505">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,7 +18,7 @@
 <body>
 <!-- ================= MUSIC PLAYER ================= -->
 
-<audio autoplay id="birthdayMusic" loop>
+<audio id="birthdayMusic" loop preload="none">
     <source src="music/birthday.mp3" type="audio/mpeg">
 </audio>
 
@@ -37,6 +40,7 @@
             class="menu-toggle"
             id="menuToggle"
             aria-label="Open navigation menu"
+            aria-controls="navLinks"
             aria-expanded="false"
         >
             <span></span>
@@ -44,6 +48,14 @@
             <span></span>
         </button>
 
+    
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="journey.html">Journey</a>
+            <a href="story.html">Our Story</a>
+            <a href="memories.html">Memories</a>
+            <a href="final.html">Final</a>
+        </div>
     </nav>
 </header>
 
@@ -76,21 +88,22 @@
                     One story worth remembering.
                 </p>
 
-                <a href="index.html"
-                    class="gold-button">
-                    ENTER THE JOURNEY →
+                <a href="journey.html"
+                    class="gold-button">ENTER THE JOURNEY →
                 </a><br>
              <div class="photo-card">
 
             <img
                 src="images/memory1.jpg"
-                alt="Joseph memory"
+                alt="A photo from Joseph and Adewole’s memories"
             >
 
             <div class="photo-caption">
 
             </div>
             </div>
+
+                    </div>
 
         </section>
 
@@ -175,7 +188,7 @@
                         UNLOCK SECRET →
                     </button>
 
-                    <p id="codeMessage"></p>
+                    <p id="codeMessage" role="status" aria-live="polite"></p>
 
                 </div>
 

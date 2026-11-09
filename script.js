@@ -12,56 +12,23 @@ const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
 if (menuToggle && navLinks) {
+    const setMenuOpen = (open) => {
+        navLinks.classList.toggle("active", open);
+        menuToggle.classList.toggle("active", open);
+        menuToggle.setAttribute("aria-expanded", String(open));
+        menuToggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+    };
 
-    menuToggle.addEventListener("click", function () {
-
-        const isOpen =
-            navLinks.classList.toggle("active");
-
-        menuToggle.classList.toggle("active", isOpen);
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            isOpen
-        );
-
-        menuToggle.setAttribute(
-            "aria-label",
-            isOpen
-                ? "Close navigation menu"
-                : "Open navigation menu"
-        );
-
+    menuToggle.addEventListener("click", () => setMenuOpen(!navLinks.classList.contains("active")));
+    navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => setMenuOpen(false));
     });
-
-
-    /* CLOSE MENU AFTER CLICKING A LINK */
-
-    const navigationLinks =
-        navLinks.querySelectorAll("a");
-
-    navigationLinks.forEach(function (link) {
-
-        link.addEventListener("click", function () {
-
-            navLinks.classList.remove("active");
-
-            menuToggle.classList.remove("active");
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            menuToggle.setAttribute(
-                "aria-label",
-                "Open navigation menu"
-            );
-
-        });
-
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && navLinks.classList.contains("active")) {
+            setMenuOpen(false);
+            menuToggle.focus();
+        }
     });
-
 }
 
 
@@ -300,7 +267,7 @@ const revealElements =
     );
 
 
-if (revealElements.length > 0) {
+if (revealElements.length > 0 && "IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
 
     revealElements.forEach(
         function (element) {
